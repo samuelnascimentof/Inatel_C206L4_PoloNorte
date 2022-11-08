@@ -1,0 +1,2 @@
+Insira os dados das crianças boazinhas separados por pipe "|" no padrão:
+nome|idade|nacionalidade|presente
