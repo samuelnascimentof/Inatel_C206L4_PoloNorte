@@ -1,2 +1,5 @@
 Insira os dados das crianças boazinhas separados por pipe "|" no padrão:
 nome|idade|nacionalidade|presente
+João Gabriel Pereira|12|Paraguaio|Bicicleta
+Euclides Rosendo|5|Chileno|Pipa
+Junelson Lagoa Parda|10|Argentino|Bambolê

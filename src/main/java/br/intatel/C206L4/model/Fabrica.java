@@ -8,10 +8,10 @@ import java.util.List;
 
 public class Fabrica {
 
-    private List<Crianca> criancas = new ArrayList<>();
+    private final List<Crianca> criancas = new ArrayList<>();
 
-    private List<Elfo> elfos = new ArrayList<>();
-    private List<Crianca> listaBonzinhos = new ArrayList<>();
+    private final List<Elfo> elfos = new ArrayList<>();
+    private final List<Crianca> listaBonzinhos = new ArrayList<>();
 
     public void novoElfo(Elfo elfo) {
         this.elfos.add(elfo);
@@ -53,13 +53,11 @@ public class Fabrica {
         if(!listaBonzinhos.isEmpty()){
             FileManager.clearOutputFile(OUTPUT_FILE);
             FileManager.writeTxt(OUTPUT_FILE, "Crianças boazinhas:");
-            int index = 0;
             for (Crianca crianca : listaBonzinhos) {
-                FileManager.writeTxt(OUTPUT_FILE, "Nome: ".concat(listaBonzinhos.get(index).getNome()));
-                FileManager.writeTxt(OUTPUT_FILE, "Idade: " + listaBonzinhos.get(index).getIdade());
-                FileManager.writeTxt(OUTPUT_FILE, "Nacionalidade: ".concat(listaBonzinhos.get(index).getNacionalidade()));
-                FileManager.writeTxt(OUTPUT_FILE, "Presente desejado: ".concat(listaBonzinhos.get(index).getPresenteDesejado()));
-                index++;
+                FileManager.writeTxt(OUTPUT_FILE, "\nNome: ".concat(crianca.getNome()));
+                FileManager.writeTxt(OUTPUT_FILE, "Idade: " + crianca.getIdade());
+                FileManager.writeTxt(OUTPUT_FILE, "Nacionalidade: ".concat(crianca.getNacionalidade()));
+                FileManager.writeTxt(OUTPUT_FILE, "Presente desejado: ".concat(crianca.getPresenteDesejado()));
             }
             System.out.println("Arquivo escrito com sucesso!");
         } else {
